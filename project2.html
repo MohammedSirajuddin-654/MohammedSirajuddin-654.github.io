@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Project 2 - Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Portfolio</strong> <span>by Sirajuddin Mohammed</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="aboutme.html">About me</a></li>
+							<li><a href="landing.html">Education</a></li>
+                            <li><a href="work.html">Work Experience</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+							
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="#Main" class="button primary fit">Get Started</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Project 2: On-Premise Windows 10 to Entra ID Joined Windows 11</h1>
+									</header>
+                                    <span class="image main"><img src="https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg" alt="Project 2 Architecture" /></span>
+									<p>This project focused on modernizing the endpoint infrastructure by transitioning from on-premise, domain-joined Windows 10 devices to a fully cloud-based, Entra ID joined Windows 11 environment. The aim was to enhance security, simplify device management, and provide a better user experience.</p>
+
+                                    <h2>Challenges</h2>
+                                    <ul>
+                                        <li>Ensuring a smooth transition for users with minimal disruption.</li>
+                                        <li>Migrating user profiles and data securely.</li>
+                                        <li>Managing application compatibility with Windows 11.</li>
+                                        <li>Configuring and enforcing security policies in a cloud environment.</li>
+                                    </ul>
+
+                                    <h2>Solution</h2>
+                                    <p>Microsoft Endpoint Manager (Intune) was used to manage the migration process. Windows Autopilot was leveraged for device provisioning and user-driven deployments. User data was migrated using OneDrive for Business. Application compatibility was assessed and addressed using application packaging and virtualization technologies.</p>
+
+                                    <h2>Technologies Used</h2>
+                                    <ul>
+                                        <li>Microsoft Entra ID</li>
+                                        <li>Microsoft Endpoint Manager (Intune)</li>
+                                        <li>Windows Autopilot</li>
+                                        <li>OneDrive for Business</li>
+                                        <li>Windows 11</li>
+                                    </ul>
+
+                                    <h2>Architecture</h2>
+                                    <style>
+                                        .mermaid {
+                                            background-color: #e6f3ff;
+                                            padding: 20px;
+                                            border-radius: 8px;
+                                            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                                        }
+                                        </style>
+                                        
+                                        <pre class="mermaid">
+                                        %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e6f3ff', 'fontFamily': 'arial' }}}%%                                        graph TD
+                                            subgraph "On-Premise"
+                                                A[Domain-Joined Windows 10] --> B(Active Directory)
+                                            end
+                                            subgraph "Azure Cloud"
+                                                C[Entra ID Joined Windows 11] --> D(Microsoft Entra ID)
+                                                C --> E(Intune)
+                                                F[OneDrive for Business]
+                                            end
+                                            A <--> C
+                                            B <--> D
+                                    </pre>
+
+                                    <h2>Outcome</h2>
+                                    <p>The successful migration to Entra ID joined Windows 11 resulted in improved security posture and simplified device management. Users benefited from a more modern and streamlined experience. The project also laid the foundation for a Zero Trust security model.</p>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>© Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+            <script>
+                mermaid.initialize({ startOnLoad: true });
+            </script>
+
+	</body>
+</html>

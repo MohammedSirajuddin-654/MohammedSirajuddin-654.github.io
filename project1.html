@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Project 1 - Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Portfolio</strong> <span>by Sirajuddin Mohammed</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="aboutme.html">About me</a></li>
+							<li><a href="landing.html">Education</a></li>
+                            <li><a href="work.html">Work Experience</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+							
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="#Main" class="button primary fit">Get Started</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Project 1: On-Premise to Azure Cloud Migration</h1>
+									</header>
+                                    <span class="image main"><img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" alt="Project 1 Architecture" /></span>
+									<p>This project involved migrating a complex on-premise infrastructure to Microsoft Azure. The goal was to improve scalability, reduce operational costs, and enhance the reliability of the infrastructure. The migration was executed using a combination of lift-and-shift and replatforming strategies.</p>
+
+                                    <h2>Challenges</h2>
+                                    <ul>
+                                        <li>Minimizing downtime during the migration.</li>
+                                        <li>Ensuring data consistency and integrity.</li>
+                                        <li>Reconfiguring applications to work in a cloud environment.</li>
+                                        <li>Training the IT team on Azure cloud technologies.</li>
+                                    </ul>
+
+                                    <h2>Solution</h2>
+                                    <p>The migration was carried out in phases. Initially, non-critical workloads were migrated using the lift-and-shift approach. Critical applications were replatformed to use Azure PaaS services like Azure SQL Database and Azure App Service. Azure Virtual Networks were configured to ensure secure connectivity. Azure Site Recovery was used for disaster recovery planning.</p>
+
+                                    <h2>Technologies Used</h2>
+                                    <ul>
+                                        <li>Azure Virtual Machines</li>
+                                        <li>Azure SQL Database</li>
+                                        <li>Azure Blob Storage</li>
+                                        <li>Azure Virtual Network</li>
+                                        <li>Azure Site Recovery</li>
+                                        <li>Azure App Service</li>
+                                    </ul>
+
+                                    <h2>Architecture</h2>
+                                    <style>
+                                    .mermaid {
+                                        background-color: #e6f3ff;
+                                        padding: 20px;
+                                        border-radius: 8px;
+                                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                                    }
+                                    </style>
+                                    
+                                    <pre class="mermaid">
+                                    %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e6f3ff', 'fontFamily': 'arial' }}}%%
+                                    graph TD
+                                        subgraph "On-Premise"
+                                            A[Application Servers] --> B(Database Servers)
+                                        end
+                                        subgraph "Azure Cloud"
+                                            C[Azure VMs] --> D(Azure SQL Database)
+                                            C --> E(Azure App Service)
+                                            F[Azure Blob Storage]
+                                            G[Azure Virtual Network]
+                                            H[Azure Site Recovery]
+                                        end
+                                        A <--> C
+                                        B <--> D
+                                    </pre>
+
+                                    <h2>Outcome</h2>
+                                    <p>The successful migration to Azure resulted in a 40% reduction in operational costs. The scalability and flexibility of Azure allowed the company to handle increased workloads efficiently. System reliability improved significantly, with a 99.9% uptime.</p>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>© Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+            <script>
+                mermaid.initialize({ startOnLoad: true });
+            </script>
+
+	</body>
+</html>
